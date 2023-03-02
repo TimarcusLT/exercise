@@ -1,23 +1,23 @@
 terraform {
   required_providers {
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "3.45.0"
     }
-      aws = {
-      source = "hashicorp/aws"
+    aws = {
+      source  = "hashicorp/aws"
       version = "4.56.0"
     }
   }
 }
 
- provider "azurerm" {
-   # Configuration options
-   features{}
+provider "azurerm" {
+  # Configuration options
+  features {}
 }
- provider "aws" {
-   # Configuration options
-   region = "us-east-1"
+provider "aws" {
+  # Configuration options
+  region = "us-east-1"
 }
 
 resource "azurerm_resource_group" "example" {
@@ -26,13 +26,13 @@ resource "azurerm_resource_group" "example" {
 
 
   tags = {
-         source = "Smile"
+    source = "Smile"
   }
 }
 
 
 resource "aws_resourcegroups_group" "test" {
-  name = "test-group"
+  name        = "test-group"
   description = "used as a test to check for failure"
 }
 
